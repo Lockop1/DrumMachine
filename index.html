@@ -26,6 +26,7 @@
                 const handleKeyDown = (event) => {
                     const audio = document.getElementById(event.key.toUpperCase());
                     const elt = audio.parentElement;
+                    if (!audio) return;
                     audio.currentTime = 0;
                     audio.volume = volume;
                     const p = audio.play();
@@ -43,6 +44,7 @@
 
             const handlePadClick = (event) => {
                 const audio = event.currentTarget.querySelector('audio');
+                if (!audio) return;
                 audio.currentTime = 0;
                 audio.volume = volume;
                 const p = audio.play();
