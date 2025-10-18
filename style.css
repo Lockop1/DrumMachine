@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(69, 69, 69);
+    margin-top: 100px;
+}
+
+#pads{
+    display: grid;
+    background-color: rgb(154, 154, 154);
+    width: 50vh;
+    height: 50vh;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 3px 10px 10px black;
+}
+
+
+button{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgb(79, 77, 0);
+    background-color: rgb(27, 27, 27);
+    color: white
+}
+
+.drum-pad.active{
+    transform: scale(0.9);
+    background-color: rgb(172, 147, 83);
+    color: goldenrod;
+    transition: transform .08s, box-shadow .08s, color 0.1s, background-color 0.5s;
+}
+
+#display{
+    justify-self: center;
+    width: 70vh;
+    background-color: rgb(32, 31, 37);
+    border: 4px solid rgb(9, 9, 26);
+    border-radius: 15px;
+    justify-items: center;
+    color: white;
+    box-shadow: 3px 5px 10px black;
+}
+
+#pad-info{
+    justify-items: center;
+    background-color: rgb(28, 31, 69);
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 55%;
+}
+
+#volume-slider{
+    width: 200px;
+    accent-color: #f5c451;
+    height: 28px;             /* click/touch area (not the track height) */
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#volume-slider::-webkit-slider-runnable-track{
+  height: 12px;
+  background: #2a2f3a;
+  border-radius: 999px;
+}
+
+#volume-slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #ffd86b;
+  border: 2px solid #151821;
+  box-shadow: 0 1px 2px rgba(0,0,0,.35);
+  margin-top: calc((12px - 27px)/2);
+  cursor: pointer;
+}
+
+#volume-slider::-moz-range-thumb{
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #ffd86b;
+  border: 2px solid #151821;
+  box-shadow: 0 1px 2px rgba(0,0,0,.35);
+  cursor: pointer;
+}
+
+#volume{
+    background: #1b202c;
+    border: 1px solid #2a2f3a;
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
